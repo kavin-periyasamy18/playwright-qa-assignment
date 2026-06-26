@@ -19,7 +19,7 @@ export class LoginPage {
         return this.page.getByRole('textbox', { name: 'Password' })
     }
     private get logoutButtonEle() {
-        return this.page.getByRole('button', { name: 'Logout' })
+        return this.page.getByRole('button', { name: 'Log out' })
     }
     private get loadingEle() {
         return this.page.locator("#loading-label")

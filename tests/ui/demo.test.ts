@@ -1,8 +1,8 @@
 import  {expect } from "@playwright/test";
-import { test } from "../fixtures/testFixtures";
-import AUT from "../utils/aut";
-import { CONSTANTS } from "../utils/constants";
-import { FileUtils } from "../utils/fileUtil";
+import { test } from "../../fixtures/testFixtures";
+import AUT from "../../utils/aut";
+import { CONSTANTS } from "../../utils/constants";
+import { FileUtils } from "../../utils/fileUtil";
 
 test(" Books Store Application Validation", async({loginPage, homePage, bookStorePage}) => {
 
@@ -20,8 +20,7 @@ test(" Books Store Application Validation", async({loginPage, homePage, bookStor
 
     await test.step("Print the book details", async () => {
         const bookDetails = await bookStorePage.getBookDetails(CONSTANTS.LEARNING_JAVASCRIPT_DESIGN_PATTERNS)
-        const bookDetailsInTextFile = await FileUtils.writeBookDetails(bookDetails)
-        console.log("Book Details in the Text File", bookDetailsInTextFile)
+        await FileUtils.writeBookDetails(bookDetails)
     })
 
     await loginPage.clickLogOut()

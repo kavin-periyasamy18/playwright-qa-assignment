@@ -13,3 +13,8 @@ export class AUTHOR{
 export class PUBLISHER{
   OREILLY_MEDIA = "O'Reilly Media"
 }
+
+export enum APIDETAILS{
+  NAME = "Kavin",
+  JOB = "Quality Assurance Engineer"
+}
